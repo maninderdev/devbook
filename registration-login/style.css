@@ -43,12 +43,12 @@ body > div[style*="z-index:9999999"] {
 .form-output h3 {
     margin-bottom: 0;
 }
-.form-wrap {
+/* .form-wrap {
     background: #fff;
     color: #7f8089;
     text-align: center;
     padding: 25px;
-}
+} */
 .form-wrap form {
     display: flex;
     flex-direction: column;
