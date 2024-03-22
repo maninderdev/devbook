@@ -9,6 +9,12 @@
     --thm-dark: #1B254B;
     --thm-primary-medium: #7B5AFF;
     --light-grey: rgb(243 245 247/1);
+    --palette-primary: #03045E;
+    --palette-2: #0077B6;
+    --palette-3: #00B4D8;
+    --palette-4: #90E0EF;
+    --palette-5: #CAF0F8;
+
 }
 
 body {
@@ -927,9 +933,8 @@ body .btn-menu-toggle {
 }
 
 .authentication-page {
-    background-color: #000;
+    background-color: var(--palette-primary);
     color: #fff;
-    padding: 20px 20px;
     display: flex;
     flex-wrap: wrap;
     min-height: 100vh;
@@ -997,7 +1002,7 @@ body .btn-menu-toggle {
     background-color: #fff;
     color: #000;
     height: 100%;
-    border-radius: 10px;
+    /* border-radius: 10px; */
     padding: 40px 40px;
     text-align: center;
     width: 100%;
