@@ -11,20 +11,20 @@
 	</form>
 	<div class="header-user">
 		<div class="admin-name">
-			<p>👋 Hey, Adela</p>
+			<p>👋 Hey, <?php echo $_SESSION['lgfname']; ?></p>
 		</div>
 		<div class="user-profile-wrapper dropdown-wrapper">
 			<button class="btn user-drop-toggle" title="AP">AP</button>
 			<div class="dropdown user-dropdown" style="display: none;">
 				<ul class="dropdown-list">
 					<li class="dropdown-item">
-						<a href="#">Profile Settings</a>
+						<a href="user_profile.php"><i class="fa-solid fa-user"></i> Edit Profile</a>
 					</li>
 					<li class="dropdown-item">
-						<a href="#">Newsletter Settings</a>
+						<a href="forget-password.php"><i class="fa-solid fa-gear"></i> Change Password</a>
 					</li>
 					<li class="dropdown-item">
-						<a href="#">Log out</a>
+						<a href="../registration-login/logout.php"><i class="fa-solid fa-power-off"></i> Logout</a>
 					</li>
 				</ul>
 			</div>

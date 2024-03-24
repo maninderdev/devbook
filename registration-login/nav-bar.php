@@ -1,5 +1,3 @@
-
-
 <div class="sidebar-wrapper">
 	<div class="logo-wrapper">
 		<span>DevBook</span>

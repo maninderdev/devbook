@@ -3,13 +3,16 @@
 		private function user_friend_status($request_from_id, $request_to_id){
 			global $dbObject;
 
-			$btnstatus;
+			$btnstatus = "";
 			$querybtn = "SELECT request_status FROM requests WHERE (request_from_id = ".$request_from_id." AND request_to_id = 	".$request_to_id.") OR (request_from_id = ".$request_to_id." AND request_to_id = ".$request_from_id.") limit 1"; 
 
 			$btnqueryrslt = $dbObject->query($querybtn);
-
 			$value = $btnqueryrslt->fetch_assoc();
-			return $value['request_status'];
+			if(is_array($value)){
+				return $value['request_status'];
+			}else{
+				return false;
+			}
 
 		}
 
