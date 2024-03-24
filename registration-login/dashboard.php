@@ -7,9 +7,9 @@ include "include/session.inc.php";
 <head>
     <title>Dashboard - Client area</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 </head>
 <body>
@@ -24,7 +24,7 @@ include "include/session.inc.php";
 	include "db.php";
 ?>
 
-	<div class="top-bar">
+	<!-- <div class="top-bar">
 		<div class="logo">
 			<div class="mobile-menu">
 				<a href="javascript:void(0)" class="menu-bar">
@@ -51,8 +51,8 @@ include "include/session.inc.php";
 				</div>
 			</div>
 		</div>
-	</div>
-	<div class="body-wrapper">
+	</div> -->
+	<div class="body-wrapper main-wrapper">
 		<?php include "nav-bar.php" ?>
 		<div class="home-wrapper">
 			<div class="home-search-bar">

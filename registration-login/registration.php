@@ -11,7 +11,7 @@
 <?php
 $fnameerror = $lnameerror = $usernameerror = $emailerror = $passworderror = "";
 
-if (isset($_POST['submit'])) {
+if (isset($_POST['email'])) {
 	$fname = $_POST['fname'];
 	$lname = $_POST['lname'];
 	$email = $_POST['email'];
@@ -44,7 +44,7 @@ if (isset($_POST['submit'])) {
                 <div class="authentication-form">
                     <!-- Nav pills -->
                     <h4>Create Account</h4>
-					<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" autocomplete="on">
+					<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" autocomplete="on" id="register-form">
 					
 						<div class="input-wrapper">
 							<input type="text" name="fname" placeholder="First Name" required>
@@ -78,7 +78,7 @@ if (isset($_POST['submit'])) {
 						</div>
 						<?php echo "<p class='error'>".$passworderror."</p>"; ?>
 						<button type="submit" class="btn btn-primary">Register</button>
-						<p>Already have an account? <a style="text-decoration: underline;" href="login.php">Login here</a></p>
+						<p class="refernce">Already have an account? <a style="text-decoration: underline;" href="login.php">Sign In</a></p>
 					</form>
                 </div>
             </div>
@@ -86,6 +86,7 @@ if (isset($_POST['submit'])) {
     </div>
 </div>
 <script src="../assets/js/jquery.min.js"></script>
+<script src="../assets/js/jquery.validate.min.js"></script>
 <script src="../assets/js/bootstrap.bundle.min.js"></script>
 <script src="../assets/js/custom.js"></script>
 <script>

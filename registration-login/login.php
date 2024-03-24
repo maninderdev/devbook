@@ -19,7 +19,7 @@ session_start();
 <body>
 <?php
 $lgusernameerror = $lgpassworderror = "";
-if (isset($_POST['submit'])) {
+if (isset($_POST['email'])) {
 	$email = $_POST['email'];
 	$password = $_POST['password'];
 	$ip = $_POST['ip'];
@@ -62,15 +62,16 @@ if (isset($_POST['submit'])) {
 						<?php echo "<p class='error'>".$lgpassworderror."</p>"; ?>
 						<input type="hidden" name="ip" value="" class="ip">
 						<button type="submit" class="btn btn-primary">Sign in</button>
-						<p>By creating an account, you agree to our <b>Terms of Service</b> and Privacy & Cookie Statement.</p>
+						<p class="font-desc-light">By creating an account, you agree to our <b>Terms of Service</b> and Privacy & Cookie Statement.</p>
 					</form>
-					<p>Don't have an account? <a style="text-decoration: underline;" href="registration.php">Register here</a></p>
+					<p class="refernce">Don't have an account? <a style="text-decoration: underline;" href="registration.php">Register here</a></p>
                 </div>
             </div>
         </div>
     </div>
 </div>
 <script src="../assets/js/jquery.min.js"></script>
+<script src="../assets/js/jquery.validate.min.js"></script>
 <script src="../assets/js/bootstrap.bundle.min.js"></script>
 <script src="../assets/js/custom.js"></script>
 </body>

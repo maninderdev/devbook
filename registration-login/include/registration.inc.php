@@ -50,15 +50,9 @@ class regisration extends registrationaction{
 		}
 		if ($result == true) {
 			if ($this->setdata($this->fname, $this->lname, $this->username, $this->email, $hashpassword	) == true) {
-				echo "<div class='form-output'>
-	                  <h3>You are registered successfully.</h3><br/>
-	                  <p class='link'>Click here to <a style='text-decoration: underline;' href='../registration-login/login.php'>Login</a></p>
-	                  </div>";
+				echo "<script>alert('You are registered successfully. You can login now.');</script>";
 			}else{
-				echo "<div class='form-output'>
-	                  <h3>Required fields are missing.</h3><br/>
-	                  <p class='link'>Click here to <a href='../registration-login/registration.php'>registration</a> again.</p>
-	                  </div>";
+				echo "<script>alert('Required fields are missing.');</script>";
 			}
 			
 		}

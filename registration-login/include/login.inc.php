@@ -26,10 +26,7 @@ class login extends loginaction{
 					echo "<script>alert('Incorrect Password');</script>";
 					break;
 				default:
-					echo "<div class='form-output'>
-	                  <h3>Incorrect Username/password.</h3><br/>
-	                  <p class='link'>Click here to <a href='../registration-login/login.php'>Login</a> again.</p>
-	                  </div>";
+					echo "<script>alert('Incorrect Password');</script>";
 					break;
 			}
 			

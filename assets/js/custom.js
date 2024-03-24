@@ -127,7 +127,7 @@ jQuery(document).ready(function () {
     if(loginForm.length){
         loginForm.validate({
             rules: {
-                username: 'required',
+                email: 'required',
                 password: 'required'
             },
             messages: {
@@ -136,9 +136,6 @@ jQuery(document).ready(function () {
             },
             invalidHandler: function(event, validator) {
                 console.log(event, validator);
-            },
-            submitHandler: function(form) {
-                window.location.href = 'subject.html';
             }
         });
     }
@@ -150,24 +147,23 @@ jQuery(document).ready(function () {
     if(registerForm.length){
         registerForm.validate({
             rules: {
-                name: 'required',
-                school: 'required',
-                class: 'required',
-                roll_number: 'required',
-                dob: 'required',
+                fname: 'required',
+                lname: 'required',
+                username: 'required',
+                email: 'required',
+                password: 'required',
+                cfpassword: 'required',
             },
             messages: {
-                name: 'Name is required',
-                school: 'School is required',
-                class: 'Class is required',
-                roll_number: 'Roll Number is required',
-                dob: 'Date of Birth is required',
+                fname: 'First Name is required',
+                lname: 'Last Name is required',
+                username: 'Username is required',
+                email: 'Email is required',
+                password: 'Password is required',
+                cfpassword: 'Confirm Password is required',
             },
             invalidHandler: function(event, validator) {
                 console.log(event, validator);
-            },
-            submitHandler: function(form) {
-                window.location.href = 'subject.html';
             }
         });
     }
