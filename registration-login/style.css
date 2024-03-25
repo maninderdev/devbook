@@ -111,13 +111,13 @@ li {
     list-style-type: none;
 }
 .top-bar {
-    background: #222;
+    background: var(--palette-primary);
     color: #fff;
-    display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 30px;
     position: relative;
+    display: none;
 
 }
 .top-bar .logo h2 {
@@ -127,7 +127,7 @@ li {
     font-weight: 700;
 }
 .nav-wrapper {
-    background: #222;
+    background: var(--palette-primary);
     color: #fff;
     flex: 0 0 17%;
     width: 17%;
@@ -259,7 +259,7 @@ li {
     height: 50px;
     position: relative;
     top: 4px;
-    background: #222;
+    background: var(--palette-primary);
     border: 1px solid #9d9d9d;
     cursor: pointer;
 }
@@ -305,7 +305,7 @@ li {
 }
 .accept_friend_btn, .reject_request_btn {
     padding: 6px 17px;
-    background: #222 !important;
+    background: var(--palette-primary) !important;
     color: #fff !important;
     border-radius: 5px;
     font-size: 14px;
@@ -339,7 +339,7 @@ button.reject_request_btn i.fa-spinner {
 }
 .message-btn{
     padding: 6px 17px;
-    background: #222 !important;
+    background: var(--palette-primary) !important;
     color: #fff !important;
     border-radius: 5px;
     font-size: 14px;
@@ -388,7 +388,7 @@ button.reject_request_btn i.fa-spinner {
 }
 .user-text-detail a {
     border: 0;
-    background: #222;
+    background: var(--palette-primary);
     color: #fff;
     border-radius: 5px;
     padding: 4px 25px;
@@ -446,7 +446,7 @@ button.reject_request_btn i.fa-spinner {
     padding: 10px;
     border: none;
     border-radius: 3px;
-    background: #222;
+    background: var(--palette-primary);
     color: #fff;
     width: 190px;
     cursor: pointer;
@@ -503,7 +503,7 @@ button.reject_request_btn i.fa-spinner {
     font-size: 16px;
     font-weight: 400;
     padding: 6px 15px;
-    background: #222;
+    background: var(--palette-primary);
     color: #fff;
     border-radius: 6px;
     cursor: pointer;
@@ -553,7 +553,7 @@ button.reject_request_btn i.fa-spinner {
     padding: 10px;
     border: none;
     border-radius: 3px;
-    background: #222;
+    background: var(--palette-primary);
     color: #fff;
     width: 190px;
     cursor: pointer;
@@ -792,7 +792,7 @@ input[type=search] {
 }
 a.friend_btn {
     padding: 6px 17px;
-    background: #222 !important;
+    background: var(--palette-primary) !important;
     color: #fff !important;
     border-radius: 5px;
     font-size: 14px;
@@ -818,17 +818,27 @@ h4.user-name {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 50%;
+    width: 62%;
+    max-width: 100%;
+    max-height: 100%;
     height: auto;
+    padding: 0 30px;
+    z-index: 999;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.2s;
+}
+.messaging-wrapper .content-wrapper {
+    width: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    height: 100%;
     background: #fff;
     z-index: 999;
     box-shadow: 0 0 80px -30px #222;
     border-radius: 10px;
     padding-top: 50px;
-    visibility: hidden;
-    opacity: 0;
-    transition: 0.2s;
-    overflow: hidden;
+    position: relative;
 }
 .messaging-wrapper.active {
     visibility: visible;
@@ -895,7 +905,7 @@ body.msg_box_active {
     display: inline-block;
 }
 .fecth_msg_wrapper#self .fecth_msg p.msg_text {
-    background: #222;
+    background: var(--palette-primary);
     color: #fff;
     padding: 6px 12px;
     display: inline-block;
@@ -919,7 +929,7 @@ body.msg_box_active {
 .messaging-wrapper .message-inputs #a_submit {
     border-radius: 40px;
     border: 1px solid #eee;
-    background: #222;
+    background: var(--palette-primary);
     color: #fff;
     font-size: 14px;
     padding: 18px;
@@ -956,7 +966,7 @@ body.msg_box_active {
   background: #9d9d9d50; 
 }
 .messages::-webkit-scrollbar-thumb {
-  background: #222; 
+  background: var(--palette-primary); 
 }
 .messages::-webkit-scrollbar-thumb:hover {
   background: #888; 
@@ -969,7 +979,7 @@ form#message-form .emojionearea .emojionearea-editor::-webkit-scrollbar-track {
   background: #9d9d9d50; 
 }
 form#message-form .emojionearea .emojionearea-editor::-webkit-scrollbar-thumb {
-  background: #222; 
+  background: var(--palette-primary); 
 }
 form#message-form .emojionearea .emojionearea-editor::-webkit-scrollbar-thumb:hover {
   background: #888; 
@@ -992,7 +1002,7 @@ form#message-form .emojionearea .emojionearea-editor {
 form#message-form .files {
     flex: 0 0 37px;
     height: 37px;
-    background: #222;
+    background: var(--palette-primary);
     border-radius: 50px;
     position: relative;
     cursor: pointer;
@@ -1162,7 +1172,7 @@ body .btn {
     border-radius: 28px;
 }
 
-.main-wrapper .sidebar-wrapper {
+.body-wrapper .sidebar-wrapper {
     width: 16rem;
     flex: 0 0 16rem;
     padding: 0px 1rem;
@@ -1181,7 +1191,7 @@ body .btn {
     fill: #ff57dc;
 }
 
-.main-wrapper .sidebar-wrapper .sidebar-menu-wrapper {
+.body-wrapper .sidebar-wrapper .sidebar-menu-wrapper {
     height: 100px;
     overflow: auto;
     flex-grow: 1;
@@ -1215,7 +1225,7 @@ body .btn {
     background: #fff;
 }
 
-.main-wrapper .main-content-wrapper {
+.body-wrapper .main-content-wrapper {
     margin-left: 20rem;
     background: #fdfeff;
     color: #000;
@@ -1230,7 +1240,7 @@ body .btn {
     max-height: 100%;
 }
 
-.main-wrapper .main-content-wrapper:before {
+.body-wrapper .main-content-wrapper:before {
     content: "";
     position: absolute;
     top: 0;
@@ -1243,11 +1253,11 @@ body .btn {
     background-size: 20rem;
 }
 
-body .main-wrapper .main-content-wrapper>* {
+body .body-wrapper .main-content-wrapper>* {
     position: relative;
 }
 
-.main-wrapper .sidebar-wrapper .logo-wrapper {
+.body-wrapper .sidebar-wrapper .logo-wrapper {
     padding: 3rem 0.5rem 2rem 0.75rem;
     display: flex;
     justify-content: space-between;
@@ -1258,12 +1268,12 @@ body .main-wrapper .main-content-wrapper>* {
     font-weight: 600;
 }
 
-.main-wrapper .sidebar-wrapper .logo-wrapper img {
+.body-wrapper .sidebar-wrapper .logo-wrapper img {
     width: 190px;
     height: auto;
 }
 
-.main-wrapper .sidebar-wrapper .logo-wrapper .toggle {
+.body-wrapper .sidebar-wrapper .logo-wrapper .toggle {
     background: transparent;
     border: none;
     outline: none;
@@ -1274,7 +1284,7 @@ body .main-wrapper .main-content-wrapper>* {
     cursor: pointer;
 }
 
-.main-wrapper .sidebar-wrapper .logo-wrapper .toggle svg {
+.body-wrapper .sidebar-wrapper .logo-wrapper .toggle svg {
     fill: #6c7275;
     transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
     transition-timing-function: linear;
@@ -1282,7 +1292,7 @@ body .main-wrapper .main-content-wrapper>* {
 }
 
 
-.main-wrapper .sidebar-wrapper .logo-wrapper .toggle:active svg {
+.body-wrapper .sidebar-wrapper .logo-wrapper .toggle:active svg {
     fill: #e8ecef;
 }
 
@@ -1631,7 +1641,7 @@ input[type="search"]::-webkit-search-results-decoration {
     position: relative;
 }
 
-.main-wrapper .main-content-wrapper .chat-footer {
+.body-wrapper .main-content-wrapper .chat-footer {
     padding: 0 30px;
 }
 
@@ -1784,7 +1794,7 @@ button.theme-toggle svg {
     fill: #e8ecef;
 }
 
-.main-wrapper .main-content-wrapper.main-100 {
+.body-wrapper .main-content-wrapper.main-100 {
     margin-left: 6rem;
 }
 

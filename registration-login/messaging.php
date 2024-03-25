@@ -8,9 +8,9 @@ session_start();
 	<meta charset="utf-8">
     <title>Messaging</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" href="https://cdn.rawgit.com/mervick/emojionearea/master/dist/emojionearea.min.css"/>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
@@ -27,7 +27,7 @@ session_start();
 
 ?>
 
-	<div class="top-bar">
+	<!-- <div class="top-bar">
 		<div class="logo">
 			<div class="mobile-menu">
 				<a href="javascript:void(0)" class="menu-bar">
@@ -54,7 +54,7 @@ session_start();
 				</div>
 			</div>
 		</div>
-	</div>
+	</div> -->
 	<div class="body-wrapper">
 		<?php include "nav-bar.php" ?>
 		<div class="home-wrapper">
@@ -68,28 +68,30 @@ session_start();
 				<?php include 'include/message.friend.inc.php';?>
 			</div>
 			<div class="messaging-wrapper" id="0">
-				<div class="msg-form-close">
-					<i class="fa-solid fa-xmark"></i>	
-				</div>
-				<div class="messages">
-					
-				</div>
-				<div class="message-inputs" >
-							<div id="imagePreview">
-							
+				<div class="content-wrapper">
+					<div class="msg-form-close">
+						<i class="fa-solid fa-xmark"></i>	
+					</div>
+					<div class="messages">
+						
+					</div>
+					<div class="message-inputs" >
+								<div id="imagePreview">
+								
+								</div>
+						<form method="POST" id="message-form">
+								<textarea type="textarea" name="message" placeholder="Type a message" id="message" ></textarea>
+							<div class="files">
+								<i class="fa-solid fa-paperclip"></i>
+								<input type="file" name="msg_file" id="file" onchange="return fileValidation()">
 							</div>
-					<form method="POST" id="message-form">
-							<textarea type="textarea" name="message" placeholder="Type a message" id="message" ></textarea>
-						<div class="files">
-							<i class="fa-solid fa-paperclip"></i>
-							<input type="file" name="msg_file" id="file" onchange="return fileValidation()">
-						</div>
-						<div class="submit-wrapper">
-							<a href="javascript:void(0)" id="a_submit">
-								<i class="fa-solid fa-paper-plane"></i>
-							</a>
-						</div>
-					</form>
+							<div class="submit-wrapper">
+								<a href="javascript:void(0)" id="a_submit">
+									<i class="fa-solid fa-paper-plane"></i>
+								</a>
+							</div>
+						</form>
+					</div>
 				</div>
 			</div>
 		</div>

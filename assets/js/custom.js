@@ -1,4 +1,4 @@
-jQuery(document).ready(function () {
+jQuery(document).ready(function ($) {
     if($('#type-message').length){
         $('#type-message').on('keydown', function (e) {
             if(e.keyCode == 13 && !e.shiftKey){
