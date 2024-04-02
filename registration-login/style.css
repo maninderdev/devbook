@@ -702,6 +702,8 @@ div#query_result i {
     font-family: 'Font Awesome 6 Free';
     font-weight: 900;
     font-size: 15px;
+}
+div#query_result i:not(.fa-clock) {
     animation: rotate 1s ease infinite;
 }
 #query_result .search_result .user-name {

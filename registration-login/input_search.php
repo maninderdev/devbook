@@ -1,4 +1,15 @@
+<?php 	$userid = $_SESSION['lgid'];
+		$username = $_SESSION['lguser'];
 
+		$fullName = "SELECT fname, lname FROM lgndetail WHERE (id='$userid' OR username = '$username')";
+		$fullNameQuery = $conn->query($userdetail);
+
+		if ($fullNameQuery->num_rows == 1) {
+			$fullNameFetch = $fullNameQuery->fetch_assoc();
+			$searchfirstname = substr($fullNameFetch['fname'],0,1);
+			$searchlastname = substr($fullNameFetch['lname'],0,1);
+		}
+?>
 <div class="header-search">
 	<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" autocomplete="off">
 		<div class="search_input_wrapper">
@@ -14,7 +25,7 @@
 			<p>👋 Hey, <?php echo $_SESSION['lgfname']; ?></p>
 		</div>
 		<div class="user-profile-wrapper dropdown-wrapper">
-			<button class="btn user-drop-toggle" title="AP">AP</button>
+			<button class="btn user-drop-toggle" title="<?php echo $searchfirstname.$searchlastname;?>"><?php echo $searchfirstname.$searchlastname;?></button>
 			<div class="dropdown user-dropdown" style="display: none;">
 				<ul class="dropdown-list">
 					<li class="dropdown-item">

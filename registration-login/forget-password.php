@@ -5,6 +5,8 @@ session_start();
 <html>
 <head>
 	<title>Forget Password</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
 	<style>
 		body {
 		    margin: 0;
@@ -142,13 +144,6 @@ session_start();
 						}else{
 							header("Location: otp-authentication.php");
 						}
-
-
-
-
-
-
-
 					}else{
 						$fpemailerror = "Invalid Email";
 					}

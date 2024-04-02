@@ -195,6 +195,9 @@ include "include/session.inc.php";
 <div class="body-wrapper">
 	<?php include "nav-bar.php" ?>
 	<div class="home-wrapper">
+		<div class="home-search-bar">
+			<?php include 'input_search.php'; ?>
+		</div>
 		<div class="user_heading">
 			Admin Profile
 		</div>
