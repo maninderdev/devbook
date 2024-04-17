@@ -152,7 +152,7 @@ session_start();
 		}	
 	}
 ?>	
-<div class="form-wrap saf5e6">
+<div class="form-wrap sdtyfrsd7">
 	<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
 		<h2>Forget Password</h2>
 		<input type="text" name="email" placeholder="Email" class="input" value="<?php echo $fpsessionemail; ?>">
