@@ -1,8 +1,8 @@
 <?php 	$userid = $_SESSION['lgid'];
 		$username = $_SESSION['lguser'];
 
-		$fullName = "SELECT fname, lname FROM lgndetail WHERE (id='$userid' OR username = '$username')";
-		$fullNameQuery = $conn->query($userdetail);
+		$userdetail = "SELECT fname, lname FROM lgndetail WHERE (id='$userid' OR username = '$username')";
+		$fullNameQuery = $dbObject->query($userdetail);
 
 		if ($fullNameQuery->num_rows == 1) {
 			$fullNameFetch = $fullNameQuery->fetch_assoc();
